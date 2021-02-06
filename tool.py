@@ -12,22 +12,27 @@ def print_file():
     
 window = Tk()
 window.title("Process Mining tool")
-window.geometry("600x300")
-lbl = Label(window, text = "Input your training and test .csv files, and give a name to the output file:", font=("Helvetica Neue", 12))
+window.geometry("270x300")
+lbl = Label(window, text = "Baseline tool for 2IOI0 ", font=("Helvetica Neue", 11))
 lbl.grid(column=0, row=0)
-lbl2 = Label(window, text = "Important! The files should be in the same directory as this file, otherwise specify complete path", font=("Helvetica Neue", 9))
-lbl2.grid(column=0, row=1)
 
-train_path = Entry(window, width = 30)
+
+train_label = Label(window, text="Training set path(.csv)")
+train_label.grid(column=0, row=1)
+train_path = Entry(window, width = 40)
 train_path.grid(column=0, row=2)
-test_path = Entry(window, width=30)
-test_path.grid(column=0, row=3)
-output_filename = Entry(window, width=30)
-output_filename.grid(column=0, row=4)
+train_label = Label(window, text="Test set path(.csv)")
+train_label.grid(column=0, row=3)
+test_path = Entry(window, width=40)
+test_path.grid(column=0, row=4)
+train_label = Label(window, text="Ouput file name(including .csv)")
+train_label.grid(column=0, row=5)
+output_filename = Entry(window, width=40)
+output_filename.grid(column=0, row=6)
 
-submit_btn = Button(window, text="Submit", command=print_file).grid(column=0, row=5)
+submit_btn = Button(window, text="Submit", command=print_file).grid(column=0, row=7)
 lbl3 = Label(window, text="Submit the two csv files")
-lbl3.grid(column=0, row=6)
+lbl3.grid(column=0, row=8)
 
 
 
