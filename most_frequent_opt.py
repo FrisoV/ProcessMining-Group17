@@ -17,6 +17,7 @@ def get_most_frequent(train_set):
     else:
         train = train_set.copy()
     cases = train["case concept:name"].unique()
+    events = train["event concept:name"].unique()
 
     frequent_events = {}
     for item in events:
@@ -37,7 +38,7 @@ def get_most_frequent(train_set):
 
             if i < len(events_values)-1:
                 i += 1
-        final = extract_frequencies(frequent_events)
+    final = extract_frequencies(frequent_events)
 
     return final
 
@@ -69,6 +70,9 @@ def baseline_next_event(path_to_train, path_to_test, output_csv):
     #create csv and return it
 
     test.to_csv(output_csv)
-    print("CSV is saved to current dictionary with name {}.csv".format(output_csv))
+    print("CSV is saved to current dictionary with name {}".format(output_csv))
 
+train_path = "data/BPI_Challenge_2012-training.csv"
+test_path = "data/BPI_Challenge_2012-test.csv"
 
+baseline_next_event(train_path, test_path, "test_next_event.csv")
