@@ -70,7 +70,7 @@ def baseline_next_event(path_to_train, path_to_test, output_csv):
     #create csv and return it
 
     test_next_event.to_csv(output_csv)
-    print("CSV is saved to current dictionary with name {}".format(output_csv))
+    print("ouput file is saved to {}".format(output_csv))
 """
 train_path = "data/BPI_Challenge_2012-training.csv"
 test_path = "data/BPI_Challenge_2012-test.csv"

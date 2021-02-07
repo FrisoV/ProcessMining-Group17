@@ -5,13 +5,13 @@ from most_frequent_opt import baseline_next_event
 
 def print_file():
     
-    res = "Input files are TRAIN: {}, TEST: {}, Output filename: {}".format(train_path.get(), test_path.get(), output_filename.get())
+    res = "ERROR! We cannot find some files.\n Please check the file paths again!".format(train_path.get(), test_path.get(), output_filename.get())
     lbl3.configure(text=res)
     baseline_next_event(train_path.get(), test_path.get(), output_filename.get())
     lbl3.configure(text="Task done!")
     
 window = Tk()
-window.title("Process Mining tool")
+window.title("2IOI0 Group 17 tool")
 window.geometry("270x300")
 lbl = Label(window, text = "Baseline tool for 2IOI0 ", font=("Helvetica Neue", 11))
 lbl.grid(column=0, row=0)
